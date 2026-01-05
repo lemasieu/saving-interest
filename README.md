@@ -13,7 +13,7 @@ Một ứng dụng web nhỏ gọn, đẹp mắt mô phỏng cửa sổ Windows 
 - Hoạt động hoàn toàn offline (trừ Flatpickr từ CDN)
 
 ## Cấu trúc thư mục
-lai-tiet-kiem/<br>
+saving-interest/<br>
 ├── index.html<br>
 ├── style.css<br>
 ├── script.js<br>
