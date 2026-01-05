@@ -1,0 +1,133 @@
+:root {
+    --title-bar-bg: linear-gradient(to bottom, #2d2d2d, #1e1e1e);
+    --title-bar-text: #ffffff;
+    --window-bg: #1a1a1a;
+    --border-color: #0078d7;
+    --input-bg: #2d2d2d;
+    --input-text: #ffffff;
+    --input-border: #444444;
+    --button-bg: #333333;
+    --button-hover: #0078d7;
+    --text-color: #e0e0e0;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #0d1117 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyMDIwMjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZDAwMDAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2cpIi8+PC9zdmc+') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.window {
+    width: 520px;
+    background: var(--window-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.title-bar {
+    background: var(--title-bar-bg);
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--title-bar-text);
+    font-weight: bold;
+    font-size: 13px;
+    border-bottom: 1px solid #000;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 4px;
+}
+
+.title-bar-controls button {
+    width: 18px;
+    height: 18px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-bar-controls button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.title-bar-controls button:last-child:hover {
+    background: #e81123;
+}
+
+.window-body {
+    padding: 20px;
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.field-row label {
+    width: 200px;
+    font-size: 13px;
+    color: #cccccc;
+}
+
+.field-row input {
+    flex: 1;
+    padding: 6px 8px;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 3px;
+    color: var(--input-text);
+    font-size: 13px;
+}
+
+.field-row input:focus {
+    outline: none;
+    border-color: var(--border-color);
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+}
+
+.field-row button {
+    width: 60px;
+    padding: 6px 0;
+    background: var(--button-bg);
+    color: white;
+    border: 1px solid #444;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.field-row button:hover {
+    background: var(--button-hover);
+    border-color: var(--border-color);
+}
+
+.field-row button:disabled {
+    background: #2a2a2a;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Tùy chỉnh Flatpickr cho hợp dark theme */
+.flatpickr-calendar {
+    background: #1e1e1e;
+    border: 1px solid #0078d7;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
