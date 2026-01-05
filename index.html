@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công cụ tính lãi tiết kiệm</title>
+
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+
+    <!-- CSS tùy chỉnh của chúng ta -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div>Công cụ tính lãi tiết kiệm</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize">_</button>
+                <button aria-label="Maximize">□</button>
+                <button aria-label="Close">×</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="field-row">
+                <label for="principal">Số tiền gửi (đ):</label>
+                <input type="text" id="principal" placeholder="Ví dụ: 100.000.000">
+                <button id="calc-principal">Tính</button>
+            </div>
+            <div class="field-row">
+                <label for="start-date">Ngày bắt đầu (dd/mm/yyyy):</label>
+                <input type="text" id="start-date" placeholder="dd/mm/yyyy">
+                <button id="calc-start-date">Tính</button>
+            </div>
+            <div class="field-row">
+                <label for="end-date">Ngày nhận lãi (dd/mm/yyyy):</label>
+                <input type="text" id="end-date" placeholder="dd/mm/yyyy">
+                <button id="calc-end-date">Tính</button>
+            </div>
+            <div class="field-row">
+                <label for="rate">Lãi suất (%):</label>
+                <input type="text" id="rate" placeholder="Ví dụ: 5.5">
+                <button id="calc-rate">Tính</button>
+            </div>
+            <div class="field-row">
+                <label for="interest">Lãi dự kiến (đ):</label>
+                <input type="text" id="interest" placeholder="Ví dụ: 1.000.000">
+                <button id="calc-interest">Tính</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
+
+    <!-- JS tùy chỉnh -->
+    <script src="script.js"></script>
+</body>
+</html>
