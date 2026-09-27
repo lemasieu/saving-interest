@@ -1,35 +1,85 @@
-# Công cụ tính lãi tiết kiệm - Giao diện Windows 7 Dark
+# Saving Interest Calculator
 
-Một ứng dụng web nhỏ gọn, đẹp mắt mô phỏng cửa sổ Windows 7 Aero với chế độ tối, giúp tính lãi tiết kiệm theo công thức thực tế tại Việt Nam.
+A compact, aesthetically pleasing web application that mimics the Windows 7 Aero window with dark mode, helping you calculate savings interest based on the real-world formula used in Vietnam.
 
-## Tính năng nổi bật
+## 🚀 Live Demo
 
-- Giao diện giống Windows 7 (title bar, bóng đổ, nút đóng/thu nhỏ/phóng to)
-- Chế độ tối hiện đại, dễ nhìn
-- Tự động format tiền tệ Việt Nam (dấu chấm ngăn cách hàng nghìn)
-- Chọn ngày bằng lịch đẹp (Flatpickr) hỗ trợ tiếng Việt
-- Linh hoạt: Nhập đủ 4 ô → nút "Tính" ở ô còn lại sẽ sáng lên → bấm để tự động tính ngược
-- Công thức: Lãi = Số tiền × Lãi suất × Số ngày / 365
-- Hoạt động hoàn toàn offline (trừ Flatpickr từ CDN)
+Check out the live demo: [https://sieu.io.vn/github/saving-interest](https://sieu.io.vn/github/saving-interest)
 
-## Cấu trúc thư mục
-saving-interest/<br>
-├── index.html<br>
-├── style.css<br>
-├── script.js<br>
-└── README.md<br>
+## ✨ Features
 
-## Cách sử dụng
+- **Windows 7 Aero Style Interface** – Title bar, drop shadow, and close/minimize/maximize buttons for a nostalgic look
+- **Modern Dark Mode** – A sleek, easy-on-the-eyes dark theme
+- **Automatic Vietnamese Currency Formatting** – Thousands separator with dots (e.g., 1.000.000)
+- **Beautiful Date Picker** – Powered by Flatpickr with Vietnamese language support
+- **Flexible Calculation** – Enter any 4 fields, and the "Calculate" button for the remaining field will light up; click it to automatically compute the inverse
+- **Real-World Formula** – Uses the standard Vietnamese savings interest formula: `Interest = Amount × Interest Rate × Days / 365`
+- **Fully Offline Capable** – Works entirely offline (except Flatpickr loaded from CDN)
 
-1. Tạo một thư mục mới
-2. Tạo 3 file: `index.html`, `style.css`, `script.js`
-3. Copy nội dung tương ứng từ bên trên vào từng file
-4. Mở file `index.html` bằng trình duyệt (Chrome, Edge, Firefox...)
+## 🛠️ Technologies Used
 
-> Ứng dụng hoạt động tốt nhất khi có kết nối mạng lần đầu (để tải Flatpickr). Sau đó có thể dùng offline.
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- Flatpickr (for the date picker)
 
-## Công thức tính
-> Lãi dự kiến = Số tiền gửi × (Lãi suất / 100) × (Số ngày gửi) / 365
+## 📁 Project Structure
 
-Trong đó:<br>
-Số ngày gửi = Ngày nhận lãi - Ngày bắt đầu (làm tròn lên)
+```
+saving-interest/
+├── index.html    # Main HTML file
+├── style.css     # Stylesheet
+├── script.js     # JavaScript calculation logic
+└── README.md     # Project documentation
+```
+
+## 🔧 Installation & Usage
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/lemasieu/saving-interest.git
+   ```
+2. **Navigate to the project folder**   
+   ```bash
+   cd saving-interest
+   ```
+3. **Open the application**
+   - Simply open `index.html` in your web browser
+   - Or use a local development server (e.g., Live Server in VS Code)
+
+## 📝 How It Works
+
+1. **Enter the known values** – Fill in any 4 of the 5 available fields:
+   - **Số tiền gửi** (Deposit Amount)
+   - **Lãi suất** (Interest Rate, %/year)
+   - **Ngày bắt đầu** (Start Date)
+   - **Ngày nhận lãi** (Maturity Date)
+   - **Lãi dự kiến** (Expected Interest)
+2. **Click the "Tính" (Calculate) button** – The button next to the empty field will light up. Click it to calculate the missing value.
+3. **View the result** – The calculated value appears in the corresponding field, automatically formatted as Vietnamese currency where applicable.
+
+**Formula:**
+> Interest = Deposit Amount × (Interest Rate / 100) × (Days Deposited) / 365
+
+**Where:**
+> Days Deposited = Maturity Date − Start Date (rounded up)
+
+**Example:**
+
+- Deposit Amount: 100.000.000 VND
+- Interest Rate: 6.5%/year
+- Start Date: 01/01/2026
+- Maturity Date: 01/07/2026 (181 days)
+- Expected Interest: 3.224.657 VND
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit a Pull Request or open an Issue.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+This project is open-source and available under the MIT License.
